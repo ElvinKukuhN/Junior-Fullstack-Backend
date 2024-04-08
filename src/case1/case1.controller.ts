@@ -57,7 +57,7 @@ const fruits: IFruit[] = [
 export class Case1Controller {
     @Get()
     getAllFruits(): any {
-        const allFruits = fruits.map((fruit) => fruit.fruitName);
+        const allFruits = fruits.map((fruit) => fruit.fruitName.toLowerCase());
         const Fruits = [...new Set(allFruits)];
 
         const fruitContainers: { [key: string]: string[] } = {};
